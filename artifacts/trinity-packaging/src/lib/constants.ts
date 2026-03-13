@@ -39,15 +39,15 @@ export const FEATURES = [
 ];
 
 export const PRODUCTS = [
-  { name: "Tab Lock Roll End", image: "https://placehold.co/400x300/1A9B7B/ffffff?text=Tab+Lock" },
-  { name: "Roll End 3 Flaps Tuck", image: "https://placehold.co/400x300/0D6E57/ffffff?text=Roll+End+3+Flaps" },
-  { name: "Roll End Tuck Front", image: "https://placehold.co/400x300/1A9B7B/ffffff?text=Roll+End+Tuck" },
-  { name: "One Piece Folder Box", image: "https://placehold.co/400x300/0D6E57/ffffff?text=One+Piece+Folder" },
-  { name: "Tuck Top Auto Bottom", image: "https://placehold.co/400x300/1A9B7B/ffffff?text=Tuck+Top+Auto" },
-  { name: "Regular Slotted Box", image: "https://placehold.co/400x300/0D6E57/ffffff?text=Regular+Slotted" },
-  { name: "Full Slotted Box", image: "https://placehold.co/400x300/1A9B7B/ffffff?text=Full+Slotted" },
-  { name: "Half Slotted Container", image: "https://placehold.co/400x300/0D6E57/ffffff?text=Half+Slotted" },
-  { name: "Gusset Folder", image: "https://placehold.co/400x300/1A9B7B/ffffff?text=Gusset+Folder" },
+  { name: "Tab Lock Roll End", image: "/images/products/tab-lock-roll-end.png" },
+  { name: "Roll End 3 Flaps Tuck", image: "/images/products/roll-end-3-flaps-tuck.png" },
+  { name: "Roll End Tuck Front", image: "/images/products/roll-end-tuck-front.png" },
+  { name: "One Piece Folder Box", image: "/images/products/one-piece-folder-box.png" },
+  { name: "Tuck Top Auto Bottom", image: "/images/products/tuck-top-auto-bottom.png" },
+  { name: "Regular Slotted Box", image: "/images/products/regular-slotted-box.png" },
+  { name: "Full Slotted Box", image: "/images/products/full-slotted-box.png" },
+  { name: "Half Slotted Container", image: "/images/products/half-slotted-container.png" },
+  { name: "Gusset Folder", image: "/images/products/gusset-folder.png" },
 ];
 
 export const SERVICES = [

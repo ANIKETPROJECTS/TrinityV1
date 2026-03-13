@@ -19,11 +19,11 @@ export function Products() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative bg-background rounded-xl overflow-hidden border border-border hover:border-primary shadow-sm hover:shadow-premium-hover transition-all duration-500"
             >
-              <div className="aspect-[4/3] overflow-hidden bg-muted">
+              <div className="aspect-[4/3] overflow-hidden bg-[#F0F9F6] flex items-center justify-center p-6">
                 <img 
                   src={product.image} 
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out mix-blend-multiply"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
               <div className="p-6 flex items-center justify-between bg-white relative z-10">
