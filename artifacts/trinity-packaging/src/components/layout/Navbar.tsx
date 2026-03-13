@@ -39,11 +39,19 @@ export function Navbar() {
                 isScrolled ? "" : "brightness-0 invert"
               )}
             />
-            <span className={cn(
-              "font-display text-xl md:text-2xl font-bold tracking-wider transition-colors duration-300",
-              isScrolled ? "text-primary" : "text-white"
-            )}>
-              TRINITY PACKAGING
+            <span className="flex flex-col leading-none">
+              <span className={cn(
+                "font-['Barlow'] font-extrabold text-2xl md:text-3xl uppercase tracking-tight transition-colors duration-300",
+                isScrolled ? "text-foreground" : "text-white"
+              )}>
+                TRINITY
+              </span>
+              <span className={cn(
+                "font-['Barlow'] font-normal text-[10px] md:text-[11px] uppercase tracking-[0.35em] transition-colors duration-300",
+                isScrolled ? "text-primary" : "text-white/90"
+              )}>
+                PACKAGING
+              </span>
             </span>
           </a>
 

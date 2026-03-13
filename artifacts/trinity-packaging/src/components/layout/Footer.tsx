@@ -17,8 +17,13 @@ export function Footer() {
                 alt="Trinity Packaging Logo"
                 className="h-12 w-auto object-contain brightness-0 invert"
               />
-              <span className="font-display text-2xl font-bold tracking-wider text-white">
-                TRINITY PACKAGING
+              <span className="flex flex-col leading-none">
+                <span className="font-['Barlow'] font-extrabold text-2xl uppercase tracking-tight text-white">
+                  TRINITY
+                </span>
+                <span className="font-['Barlow'] font-normal text-[11px] uppercase tracking-[0.35em] text-white/80">
+                  PACKAGING
+                </span>
               </span>
             </div>
             <p className="text-white/70 font-sans leading-relaxed mb-6">
