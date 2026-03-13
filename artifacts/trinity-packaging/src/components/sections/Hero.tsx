@@ -15,23 +15,34 @@ const VIDEOS = [
 const TYPEWRITER_TEXT =
   "Manufacturers of Premium Corrugated Boxes & Duplex Cartons — Vilholi, Nashik";
 
-function useTypewriter(text: string, speed = 40, startDelay = 1200) {
+function useTypewriter(text: string, speed = 40, startDelay = 1200, pauseAfter = 3000) {
   const [displayed, setDisplayed] = useState("");
-  const [started, setStarted] = useState(false);
+  const [phase, setPhase] = useState<"waiting" | "typing" | "pausing">("waiting");
 
+  // Initial delay before first type
   useEffect(() => {
-    const t = setTimeout(() => setStarted(true), startDelay);
+    const t = setTimeout(() => setPhase("typing"), startDelay);
     return () => clearTimeout(t);
   }, [startDelay]);
 
   useEffect(() => {
-    if (!started || displayed.length >= text.length) return;
-    const t = setTimeout(
-      () => setDisplayed(text.slice(0, displayed.length + 1)),
-      speed
-    );
-    return () => clearTimeout(t);
-  }, [displayed, started, text, speed]);
+    if (phase === "typing") {
+      if (displayed.length < text.length) {
+        const t = setTimeout(() => setDisplayed(text.slice(0, displayed.length + 1)), speed);
+        return () => clearTimeout(t);
+      } else {
+        // Finished typing — pause then reset
+        setPhase("pausing");
+      }
+    }
+    if (phase === "pausing") {
+      const t = setTimeout(() => {
+        setDisplayed("");
+        setPhase("typing");
+      }, pauseAfter);
+      return () => clearTimeout(t);
+    }
+  }, [displayed, phase, text, speed, pauseAfter]);
 
   return displayed;
 }
