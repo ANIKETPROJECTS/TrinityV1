@@ -55,7 +55,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-lg md:text-2xl text-white/80 font-sans max-w-2xl mb-12 leading-relaxed"
           >
-            Manufacturers of Premium Corrugated Boxes & Duplex Cartons. Built for strength, designed for your brand.
+            Manufacturers of Premium Corrugated Boxes & Duplex Cartons — Vilholi, Nashik
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">

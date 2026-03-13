@@ -8,9 +8,9 @@ export function Team() {
     <section id="team" className="py-24 bg-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <SectionHeading tag="OUR PEOPLE" title="The Team Behind the Quality" className="mb-6 flex flex-col items-center" />
-          <p className="text-foreground/70 font-sans text-lg">
-            Our operations are driven by a dedicated workforce. From skilled operators to management, every member is committed to maintaining the highest standards of manufacturing excellence.
+          <SectionHeading tag="OUR PEOPLE" title="Our Team" className="mb-6 flex flex-col items-center" />
+          <p className="text-foreground/70 font-sans text-lg leading-relaxed">
+            Trinity Packaging is powered by a dedicated and skilled team focused on quality and efficiency. Our workforce includes 12 trained production workers who manage machine operations and quality control, supported by a Production Supervisor, Marketing Executive, and Accounts Executive — all working together to ensure smooth operations, timely delivery, and customer satisfaction.
           </p>
         </div>
 

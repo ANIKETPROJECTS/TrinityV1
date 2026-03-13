@@ -69,7 +69,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-white/50 text-sm">
-          <p>© {currentYear} Trinity Packaging. All rights reserved.</p>
+          <p>© 2026 Trinity Packaging. All Rights Reserved.</p>
           <p>Designed for Quality & Durability.</p>
         </div>
       </div>

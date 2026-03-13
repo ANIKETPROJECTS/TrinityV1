@@ -13,27 +13,27 @@ export const NAVIGATION_LINKS = [
 export const FEATURES = [
   {
     title: "Consistent Quality",
-    description: "Strict supervision at every production stage to ensure flawless packaging.",
+    description: "Strict supervision at every production stage",
     icon: "ShieldCheck"
   },
   {
     title: "Custom Solutions",
-    description: "Packaging tailored precisely to your exact specifications and brand needs.",
+    description: "Packaging tailored to your exact specifications",
     icon: "PackageSearch"
   },
   {
     title: "Competitive Pricing",
-    description: "Cost-effective solutions coupled with highly reliable delivery timelines.",
+    description: "Cost-effective with reliable delivery timelines",
     icon: "TrendingDown"
   },
   {
     title: "Expert Management",
-    description: "Professional team backed by dedicated, responsive customer support.",
+    description: "Professional team with dedicated customer support",
     icon: "Users"
   },
   {
     title: "Scalable Capacity",
-    description: "Ready and equipped for bulk and repeat orders of all sizes and volumes.",
+    description: "Ready for bulk and repeat orders of all sizes",
     icon: "Maximize"
   }
 ];
@@ -55,33 +55,30 @@ export const SERVICES = [
     title: "Corrugated Packaging Services",
     icon: "Box",
     items: [
-      "Custom Box Design & Engineering",
-      "High-Volume Manufacturing",
-      "Die-Cut Corrugated Solutions",
-      "Heavy-Duty Industrial Packaging",
-      "Printed Corrugated Cartons"
+      "3-Ply and 5-Ply Corrugated Box Manufacturing",
+      "Plain and Printed Corrugated Boxes",
+      "Regular Slotted Containers (RSC)",
+      "Customized Corrugated Packaging Solutions"
     ]
   },
   {
     title: "Duplex Carton Services",
     icon: "Layers",
     items: [
-      "Premium Product Cartons",
-      "Pharmaceutical Packaging",
-      "FMCG Packaging Solutions",
-      "Offset Printed Cartons",
-      "Food-Grade Safe Packaging"
+      "Duplex Cartons (Grey Back / White Back)",
+      "Printed Duplex Cartons",
+      "Die-Cut and Folding Cartons",
+      "Retail and Shelf-Display Packaging"
     ]
   },
   {
     title: "Value-Added Services",
     icon: "Sparkles",
     items: [
-      "Inventory Management (JIT)",
-      "Structural Testing & Validation",
-      "Eco-Friendly Material Sourcing",
-      "Prototyping & Sampling",
-      "Logistics & Dedicated Delivery"
+      "Custom size and strength optimization",
+      "Branding and logo printing",
+      "Bulk order and repeat supply support",
+      "Packaging consultation based on product requirement"
     ]
   }
 ];

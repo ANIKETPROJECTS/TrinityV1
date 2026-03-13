@@ -29,7 +29,7 @@ export function Infrastructure() {
               transition={{ duration: 0.6 }}
               className="text-lg text-foreground/80 font-sans mb-12 leading-relaxed"
             >
-              Our manufacturing unit is designed for efficiency and scale. We continually invest in advanced machinery to ensure high-speed production without compromising the structural integrity of our packaging products.
+              Our manufacturing unit at Vilholi, Nashik is supported by a well-planned infrastructure designed for smooth and efficient operations. The facility includes a material inward and outward storage area with proper documentation and inventory control systems. We operate with 10+ semi-automatic machines that support corrugation, cutting, printing, and finishing processes. We have a dedicated office space accommodating 15+ employees ensuring effective coordination between production, sales, and dispatch teams.
             </motion.p>
 
             <div ref={ref} className="grid grid-cols-3 gap-6 pt-8 border-t border-border">

@@ -22,8 +22,8 @@ export function WhyUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center flex flex-col items-center mb-16">
           <SectionHeading tag="OUR ADVANTAGE" title="Why Choose Us" className="mb-0" />
-          <p className="mt-6 text-foreground/70 max-w-2xl text-lg">
-            We partner with businesses to deliver packaging that meets rigorous standards without compromising on cost or timeline.
+          <p className="mt-6 text-foreground/70 max-w-3xl text-lg leading-relaxed">
+            At Trinity Packaging, we believe packaging is more than protection — it is a reflection of quality, reliability, and brand value. Our manufacturing processes are designed to deliver consistent performance while maintaining cost efficiency for our customers. We combine modern machinery, skilled manpower, and disciplined operations to meet evolving market demands. Our strategic location in Nashik enables faster logistics and better service to nearby industrial clusters.
           </p>
         </div>
 

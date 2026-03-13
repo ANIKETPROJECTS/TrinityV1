@@ -18,17 +18,14 @@ export function About() {
               className="space-y-6 text-foreground/80 font-sans text-lg leading-relaxed"
             >
               <p>
-                Established in <strong className="text-foreground">March 2026</strong> and strategically located in Vilholi, Nashik, 
-                Trinity Packaging is a premier manufacturer specializing in high-quality corrugated boxes and duplex cartons.
+                Trinity Packaging is a growing corrugation and packaging manufacturing company established in March 2026, located at Vilholi, Nashik — one of Maharashtra's emerging industrial hubs. We specialize in manufacturing high-quality corrugated boxes and duplex cartons that meet the packaging needs of diverse industries.
               </p>
               <p>
-                We are equipped with modern, semi-automatic Chinese machinery that allows us to maintain strict quality standards while ensuring efficient production cycles. Our facility is designed to handle diverse packaging requirements with precision and care.
+                Our facility is equipped with modern semi-automatic Chinese machinery, enabling efficient production, consistent quality, and timely delivery. We focus on providing durable, cost-effective, and customized packaging solutions that ensure product safety during storage and transportation.
               </p>
-              <div className="p-6 bg-secondary border-l-4 border-primary mt-8">
-                <p className="font-semibold text-accent m-0 text-xl font-display tracking-wide">
-                  "Our customer-centric approach guarantees that we deliver not just boxes, but packaging solutions that protect and elevate your products."
-                </p>
-              </div>
+              <p>
+                Driven by a customer-centric approach, Trinity Packaging emphasizes quality control, operational efficiency, and long-term business relationships. With a skilled workforce, professional management, and strong market orientation, we aim to become a reliable packaging partner for small, medium, and large enterprises across the region.
+              </p>
             </motion.div>
           </div>
 
