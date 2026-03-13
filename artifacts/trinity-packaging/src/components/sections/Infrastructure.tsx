@@ -49,25 +49,19 @@ export function Infrastructure() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {[1, 2, 3, 4].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`rounded-2xl overflow-hidden shadow-sm bg-muted ${i === 1 || i === 4 ? 'aspect-square' : 'aspect-[4/5]'}`}
-              >
-                {/* infrastructure machine details */}
-                <img 
-                  src={`https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=${i === 1 || i === 4 ? 400 : 500}&fit=crop&auto=format`}
-                  alt="Factory Details" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                />
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="rounded-2xl overflow-hidden shadow-lg"
+          >
+            <img
+              src="/images/infrastructure.png"
+              alt="Trinity Packaging Facility"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
 
         </div>
       </div>
