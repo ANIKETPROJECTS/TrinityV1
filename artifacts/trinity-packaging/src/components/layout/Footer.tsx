@@ -11,11 +11,16 @@ export function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-1">
-            <img
-              src="/images/logo.png"
-              alt="Trinity Packaging"
-              className="h-20 w-auto object-contain mb-5 brightness-0 invert"
-            />
+            <div className="flex items-center gap-3 mb-5">
+              <img
+                src="/images/logo.png"
+                alt="Trinity Packaging Logo"
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
+              <span className="font-display text-2xl font-bold tracking-wider text-white">
+                TRINITY PACKAGING
+              </span>
+            </div>
             <p className="text-white/70 font-sans leading-relaxed mb-6">
               Quality Packaging. Reliable Partnership. Manufacturers of Premium Corrugated Boxes & Duplex Cartons.
             </p>

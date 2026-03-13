@@ -30,15 +30,21 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="group relative z-50 flex items-center">
+          <a href="#home" className="group relative z-50 flex items-center gap-3">
             <img
               src={`${import.meta.env.BASE_URL}images/logo.png`}
-              alt="Trinity Packaging"
+              alt="Trinity Packaging Logo"
               className={cn(
-                "h-14 md:h-16 w-auto object-contain transition-all duration-300",
+                "h-10 md:h-12 w-auto object-contain transition-all duration-300",
                 isScrolled ? "" : "brightness-0 invert"
               )}
             />
+            <span className={cn(
+              "font-display text-xl md:text-2xl font-bold tracking-wider transition-colors duration-300",
+              isScrolled ? "text-primary" : "text-white"
+            )}>
+              TRINITY PACKAGING
+            </span>
           </a>
 
           {/* Desktop Nav */}
