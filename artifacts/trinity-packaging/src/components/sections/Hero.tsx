@@ -97,8 +97,9 @@ export function Hero() {
       id="home"
       className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
     >
-      {/* Double-buffered background videos — zero tint */}
+      {/* Double-buffered background videos */}
       <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-10 bg-black/50" />
         <video
           ref={refA}
           muted
