@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle2, ChevronRight } from "lucide-react";
 import { PRODUCTS } from "@/lib/constants";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 export default function ProductPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -319,6 +320,7 @@ export default function ProductPage() {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }
