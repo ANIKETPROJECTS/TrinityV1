@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocation } from "wouter";
 import { NAVIGATION_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location, navigate] = useLocation();
+
+  const isHome = location === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,8 +20,26 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = () => {
+  const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
+    const sectionId = href.replace("#", "");
+    if (isHome) {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+      }, 120);
+    }
+  };
+
+  const handleLogoClick = () => {
+    setIsMobileMenuOpen(false);
+    if (isHome) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
   };
 
   return (
@@ -30,7 +52,10 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="group relative z-50 flex items-center">
+          <button
+            onClick={handleLogoClick}
+            className="group relative z-50 flex items-center"
+          >
             <img
               src={isScrolled
                 ? `${import.meta.env.BASE_URL}images/logo-scrolled.svg`
@@ -38,21 +63,21 @@ export function Navbar() {
               alt="Trinity Packaging Logo"
               className="h-10 md:h-14 w-auto object-contain transition-all duration-300"
             />
-          </a>
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {NAVIGATION_LINKS.map((link) => (
-              <a
+              <button
                 key={link.label}
-                href={link.href}
+                onClick={() => handleNavClick(link.href)}
                 className={cn(
                   "text-sm font-semibold tracking-wide uppercase transition-colors hover:text-primary",
                   isScrolled ? "text-foreground/80" : "text-white/90"
                 )}
               >
                 {link.label}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -83,14 +108,13 @@ export function Navbar() {
           >
             <div className="flex flex-col py-4 px-6 gap-4">
               {NAVIGATION_LINKS.map((link) => (
-                <a
+                <button
                   key={link.label}
-                  href={link.href}
-                  onClick={handleLinkClick}
-                  className="text-lg font-display font-bold text-foreground py-2 border-b border-border/50 hover:text-primary transition-colors"
+                  onClick={() => handleNavClick(link.href)}
+                  className="text-left text-lg font-display font-bold text-foreground py-2 border-b border-border/50 hover:text-primary transition-colors"
                 >
                   {link.label}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>
