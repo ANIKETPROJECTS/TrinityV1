@@ -1,10 +1,7 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./pages/Home";
-
-// Note: Removed TooltipProvider/Toaster as they require shadcn ui setup 
-// that wasn't requested or fully provided in the context for this specific run.
-// The raw tailwind + framer motion approach is used for maximum control and beauty.
+import ProductPage from "./pages/ProductPage";
 
 const queryClient = new QueryClient();
 
@@ -12,6 +9,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/products/:slug" component={ProductPage} />
       <Route>
         <div className="min-h-screen w-full flex items-center justify-center bg-background text-foreground font-sans">
           <div className="text-center">

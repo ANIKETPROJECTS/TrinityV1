@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PRODUCTS } from "@/lib/constants";
 import { ArrowUpRight } from "lucide-react";
 
 export function Products() {
+  const [, navigate] = useLocation();
+
   return (
     <section id="products" className="py-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -17,7 +20,8 @@ export function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-background rounded-xl overflow-hidden border border-border hover:border-primary shadow-sm hover:shadow-premium-hover transition-all duration-500"
+              className="group relative bg-background rounded-xl overflow-hidden border border-border hover:border-primary shadow-sm hover:shadow-premium-hover transition-all duration-500 cursor-pointer"
+              onClick={() => navigate(`/products/${product.slug}`)}
             >
               <div className="aspect-[4/3] overflow-hidden bg-[#F0F9F6] flex items-center justify-center p-6">
                 <img 
