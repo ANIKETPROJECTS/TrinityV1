@@ -259,7 +259,7 @@ export default function ProductPage() {
                   Contact Us
                 </button>
                 <button
-                  onClick={() => navigate("/")}
+                  onClick={() => { navigate("/"); setTimeout(() => { document.getElementById("products")?.scrollIntoView({ behavior: "smooth" }); }, 100); }}
                   className="border-2 border-white text-white font-display font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-none hover:bg-white/10 transition-colors"
                 >
                   View All Products
