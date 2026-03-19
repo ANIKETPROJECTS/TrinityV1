@@ -30,29 +30,14 @@ export function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="group relative z-50 flex items-center gap-3">
+          <a href="#home" className="group relative z-50 flex items-center">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo.png`}
+              src={isScrolled
+                ? `${import.meta.env.BASE_URL}images/logo-scrolled.svg`
+                : `${import.meta.env.BASE_URL}images/logo-top.svg`}
               alt="Trinity Packaging Logo"
-              className={cn(
-                "h-10 md:h-12 w-auto object-contain transition-all duration-300",
-                isScrolled ? "" : "brightness-0 invert"
-              )}
+              className="h-10 md:h-14 w-auto object-contain transition-all duration-300"
             />
-            <span className="flex flex-col leading-none">
-              <span className={cn(
-                "font-['Barlow'] font-extrabold text-2xl md:text-3xl uppercase tracking-tight transition-colors duration-300",
-                isScrolled ? "text-foreground" : "text-white"
-              )}>
-                TRINITY
-              </span>
-              <span className={cn(
-                "font-['Barlow'] font-normal text-[10px] md:text-[11px] uppercase tracking-[0.35em] transition-colors duration-300",
-                isScrolled ? "text-primary" : "text-white/90"
-              )}>
-                PACKAGING
-              </span>
-            </span>
           </a>
 
           {/* Desktop Nav */}
