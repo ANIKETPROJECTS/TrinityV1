@@ -22,7 +22,7 @@ export function Machines() {
                 <img 
                   src={machine.image} 
                   alt={machine.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out mix-blend-multiply"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
               </div>

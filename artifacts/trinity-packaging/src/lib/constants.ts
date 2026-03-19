@@ -84,13 +84,13 @@ export const SERVICES = [
 ];
 
 export const MACHINES = [
-  { name: "Corrugation Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=Corrugation" },
-  { name: "Sheet Cutting Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=Sheet+Cutting" },
-  { name: "Sheet Pasting Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=Sheet+Pasting" },
-  { name: "Slitting and Creasing Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=Slitting+Creasing" },
-  { name: "RS4 Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=RS4+Machine" },
-  { name: "Box Stitching Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=Box+Stitching" },
-  { name: "Paper Die Cutting Machine", image: "https://placehold.co/400x300/e2e8f0/1a1a1a?text=Die+Cutting" },
+  { name: "Corrugation Machine", image: `${import.meta.env.BASE_URL}images/corrugation-machine.png` },
+  { name: "Sheet Cutting Machine", image: `${import.meta.env.BASE_URL}images/sheet-cutting-machine.png` },
+  { name: "Sheet Pasting Machine", image: `${import.meta.env.BASE_URL}images/sheet-pasting-machine.png` },
+  { name: "Slitting and Creasing Machine", image: `${import.meta.env.BASE_URL}images/slitting-creasing-machine.png` },
+  { name: "RS4 Machine", image: `${import.meta.env.BASE_URL}images/rs4-machine.png` },
+  { name: "Box Stitching Machine", image: `${import.meta.env.BASE_URL}images/box-stitching-machine.png` },
+  { name: "Paper Die Cutting Machine", image: `${import.meta.env.BASE_URL}images/paper-die-cutting-machine.png` },
 ];
 
 export const TEAM_ROLES = [
