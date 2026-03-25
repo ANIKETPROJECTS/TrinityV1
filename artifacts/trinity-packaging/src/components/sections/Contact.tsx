@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -15,16 +16,32 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export function Contact() {
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormValues>({
     resolver: zodResolver(formSchema)
   });
 
   const onSubmit = async (data: FormValues) => {
-    // Mock submission for frontend-only app
-    console.log("Form submitted:", data);
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    alert("Thank you for your message. We will get back to you soon!");
-    reset();
+    setSubmitStatus("idle");
+    setErrorMessage("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (!res.ok) {
+        throw new Error(json.error || "Failed to send inquiry.");
+      }
+      setSubmitStatus("success");
+      reset();
+    } catch (err: unknown) {
+      setSubmitStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -108,6 +125,18 @@ export function Contact() {
             <div className="bg-card p-8 md:p-12 rounded-2xl border border-border shadow-premium">
               <h3 className="font-display text-3xl font-bold mb-2">Send us an Inquiry</h3>
               <p className="text-muted-foreground mb-8">Fill out the form below and our team will get back to you promptly.</p>
+              
+              {submitStatus === "success" && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 font-medium">
+                  Thank you for your inquiry! We have received your message and will get back to you soon.
+                </div>
+              )}
+
+              {submitStatus === "error" && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 font-medium">
+                  {errorMessage}
+                </div>
+              )}
               
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
