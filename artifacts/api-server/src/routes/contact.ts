@@ -59,7 +59,6 @@ router.post("/contact", async (req, res) => {
   };
 
   try {
-    console.log("Attempting to send email from:", gmailUser, "pass length:", gmailPass.replace(/\s/g, "").length);
     await transporter.sendMail(mailOptions);
     res.json({ success: true, message: "Inquiry sent successfully." });
   } catch (err) {
