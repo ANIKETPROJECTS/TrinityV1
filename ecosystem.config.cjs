@@ -3,6 +3,7 @@ module.exports = {
     {
       name: "trinity-api",
       script: "artifacts/api-server/dist/index.cjs",
+      interpreter: "node",
       watch: false,
       instances: 1,
       autorestart: true,
