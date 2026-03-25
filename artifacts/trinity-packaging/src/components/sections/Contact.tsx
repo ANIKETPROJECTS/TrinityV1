@@ -32,7 +32,13 @@ export function Contact() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      const json = await res.json();
+      const text = await res.text();
+      let json: { success?: boolean; error?: string } = {};
+      try {
+        json = JSON.parse(text);
+      } catch {
+        throw new Error("Unable to reach the server. Please try again.");
+      }
       if (!res.ok) {
         throw new Error(json.error || "Failed to send inquiry.");
       }
